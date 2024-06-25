@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: OculusRuntimeSettings
   m_EditorClassIdentifier: 
   colorSpace: 7
-  requestsVisualFaceTracking: 1
-  requestsAudioFaceTracking: 1
-  telemetryProjectGuid: f0e673f0-6518-4e13-b359-b7694db7cb22
-  bodyTrackingFidelity: 1
-  bodyTrackingJointSet: 0
+  hasSentConsentEvent: 1
+  hasSetTelemetryEnabled: 1
+  telemetryEnabled: 1
