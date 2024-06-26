@@ -1,10 +1,9 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ReturnGrab : MonoBehaviour
+public class ReturnBall : MonoBehaviour
 {
     //public Transform leftHandAnchor;
     public Transform rightHandAnchor;
@@ -17,24 +16,12 @@ public class ReturnGrab : MonoBehaviour
 
     private void Update()
     {
-        // 그랩 버튼을 눌렀을 때 오브젝트를 손으로 가져오기
-        /*if (OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger))
-        {
-            targetHand = leftHandAnchor;
-            Call();
-        }*/
-        if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
+        if (OVRInput.GetDown(OVRInput.Button.One))
         {
             targetHand = rightHandAnchor;
             Call();
-        }
-        //if (Input.GetKeyDown(KeyCode.F))
-        //{
-        //    targetHand = rightHandAnchor;
-        //    Call();
-        //}
+        }       
     }
-
     public void Call()
     {
         if (!gameObject.activeInHierarchy || targetHand == null) return;
@@ -71,3 +58,4 @@ public class ReturnGrab : MonoBehaviour
         OnCompleted?.Invoke();
     }
 }
+
