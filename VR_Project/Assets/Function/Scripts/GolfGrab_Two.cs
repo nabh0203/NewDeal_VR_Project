@@ -9,6 +9,8 @@ public class GolfGrab_Two : OVRGrabbable
     // 원하는 위치와 각도를 설정할 Transform
     public Transform desiredTransform;
 
+    public GameObject[] hands = new GameObject[2]; 
+
     protected override void Start()
     {
         isGrab = false;
@@ -33,6 +35,13 @@ public class GolfGrab_Two : OVRGrabbable
             // 오브젝트의 위치와 회전을 원하는 Transform 값으로 설정합니다.
             transform.position = desiredTransform.position;
             transform.rotation = desiredTransform.rotation;
+            foreach (GameObject handModel in hands)
+            {
+                if (handModel != null)
+                {
+                    handModel.SetActive(false);
+                }
+            }
         }
         else
         {
@@ -52,6 +61,13 @@ public class GolfGrab_Two : OVRGrabbable
             rb.isKinematic = true;
             rb.useGravity = false;
             isGrab = false;
+            foreach (GameObject handModel in hands)
+            {
+                if (handModel != null)
+                {
+                    handModel.SetActive(true);
+                }
+            }
         }
         else
         {
