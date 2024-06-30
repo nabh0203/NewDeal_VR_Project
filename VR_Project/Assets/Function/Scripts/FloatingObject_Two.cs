@@ -11,23 +11,41 @@ public class FloatingObject_Two : MonoBehaviour
     // 시작 위치를 저장하기 위한 변수
     private Vector3 startPosition;
 
+    public ReturnBall reBall;
+
+    public  HapticFeedback hapticFeedback;
     void Start()
     {
         // 오브젝트의 시작 위치를 저장
         startPosition = transform.position;
+        if (hapticFeedback == null)
+        {
+            Debug.LogError("HapticFeedback 스크립트를 찾을 수 없습니다.");
+        }
     }
 
     void Update()
     {
+        if (reBall.isBall == true) 
+        { 
             Gravity();
+            //enabled = true;
+            Debug.Log("부유 시작");
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("GolfClub"))
         {
+            if (hapticFeedback != null)
+            {
+                hapticFeedback.TriggerHapticFeedback(OVRInput.Controller.LTouch);
+                hapticFeedback.TriggerHapticFeedback(OVRInput.Controller.RTouch);
+            }
             // 부유 시작
-            enabled = false;
+            //enabled = false;
+            reBall.isBall = false;
             Debug.Log("충돌");
         }
     }
