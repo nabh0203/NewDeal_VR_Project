@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class TestDebug : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    public void Butotn()
     {
-        if (collision.gameObject.CompareTag("GolfBall"))
-        {
-            Debug.Log("충돌");
-        }
+        Debug.Log("버튼 눌림");
     }
 }

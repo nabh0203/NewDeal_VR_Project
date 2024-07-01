@@ -11,7 +11,7 @@ public class FloatingObject_Two : MonoBehaviour
     // 시작 위치를 저장하기 위한 변수
     private Vector3 startPosition;
 
-    public ReturnBall_Two reBallTwo;
+    public ReturnBall reBall;
 
     public  HapticFeedback hapticFeedback;
     void Start()
@@ -26,7 +26,7 @@ public class FloatingObject_Two : MonoBehaviour
 
     void Update()
     {
-        if (reBallTwo.isBall == true) 
+        if (reBall.isBall == true) 
         { 
             Gravity();
             //enabled = true;
@@ -45,7 +45,7 @@ public class FloatingObject_Two : MonoBehaviour
             }
             // 부유 시작
             //enabled = false;
-            reBallTwo.isBall = false;
+            reBall.isBall = false;
             Debug.Log("충돌");
         }
     }
