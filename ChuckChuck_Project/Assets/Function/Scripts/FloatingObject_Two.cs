@@ -9,15 +9,16 @@ public class FloatingObject_Two : MonoBehaviour
     // 부유하는 높이
     public float floatHeight = 0.5f;
     // 시작 위치를 저장하기 위한 변수
-    private Vector3 startPosition;
+    public Transform startPosition;
 
     public ReturnBall reBall;
+    public HapticFeedback hapticFeedback;
 
-    public  HapticFeedback hapticFeedback;
     void Start()
     {
-        // 오브젝트의 시작 위치를 저장
-        startPosition = transform.position;
+        // 오브젝트의 시작 위치를 startPosition에서 가져옵니다.
+        transform.position = startPosition.position;
+
         if (hapticFeedback == null)
         {
             Debug.LogError("HapticFeedback 스크립트를 찾을 수 없습니다.");
@@ -26,8 +27,8 @@ public class FloatingObject_Two : MonoBehaviour
 
     void Update()
     {
-        if (reBall.isBall == true) 
-        { 
+        if (reBall.isBall == true)
+        {
             Gravity();
             //enabled = true;
             Debug.Log("부유 시작");
@@ -53,11 +54,7 @@ public class FloatingObject_Two : MonoBehaviour
     private void Gravity()
     {
         // 부유하는 애니메이션을 계산
-        float newY = startPosition.y + Mathf.Sin(Time.time * floatSpeed) * floatHeight;
-        transform.position = new Vector3(startPosition.x, newY, startPosition.z);
+        float newY = startPosition.position.y + Mathf.Sin(Time.time * floatSpeed) * floatHeight;
+        transform.position = new Vector3(startPosition.position.x, newY, startPosition.position.z);
     }
-
 }
-
-
-
