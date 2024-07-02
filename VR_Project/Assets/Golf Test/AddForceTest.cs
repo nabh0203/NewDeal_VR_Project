@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AddForceTest : MonoBehaviour
 {
-    public float forceAmount = -10f; // 가할 힘의 크기
+    public float throwForce = 10f; // 공을 던질 힘
     private Rigidbody rb;
 
     void Start()
@@ -14,11 +14,16 @@ public class AddForceTest : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // 마우스 왼쪽 버튼 클릭 확인
+        if (Input.GetMouseButtonDown(0)) // 마우스 왼쪽 버튼 클릭
         {
-            // z축 방향으로 위쪽으로 힘을 가함
-            Vector3 forceDirection = new Vector3(0, 1, 1).normalized; // 위쪽과 앞으로 힘을 가하는 방향 설정
-            rb.AddForce(forceDirection * forceAmount, ForceMode.Impulse);
+            ThrowBall();
         }
+    }
+
+    void ThrowBall()
+    {
+        // 카메라 방향으로 힘을 가해 공을 던짐
+        Vector3 throwDirection = Camera.main.transform.forward;
+        rb.AddForce(throwDirection * throwForce, ForceMode.VelocityChange);
     }
 }

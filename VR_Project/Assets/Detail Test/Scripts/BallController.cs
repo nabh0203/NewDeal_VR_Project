@@ -4,38 +4,23 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
-    public float moveSpeed = 10f;
-    public bool pullable = true;
-    private int n;
-    Rigidbody rb;
+    public float speed = 5f; // 공의 이동 속도
+
+    private Rigidbody rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
+    }
 
     void Update()
     {
-        MoveBall();
-    }
-    
-
-    public void CountBall()
-    {
-        n++;
-        if (n == 3)
-        {
-            gameObject.SetActive(false);
-        }
-    }
-    public void MoveBall()
-    {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
-
+        
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-        transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
-    }
 
-    public void OffRigidbodyBall()
-    {
-        rb.useGravity = false;
+        rb.AddForce(movement * speed);
     }
-
-    
 }

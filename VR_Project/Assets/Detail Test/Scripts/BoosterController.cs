@@ -12,12 +12,12 @@ public class BoosterController : MonoBehaviour
     {
         if (other.CompareTag("Ball"))
         {
-            Rigidbody playerRigidbody = other.GetComponent<Rigidbody>();
-            if (playerRigidbody != null)
+            Rigidbody rigidbody = other.GetComponent<Rigidbody>();
+            if (rigidbody != null)
             {
                 // playerRigidbody.AddForce(Vector3.forward * boostForce, ForceMode.Impulse);
                 Vector3 boostDirection = new Vector3(-leftwardBoostForce, 0, forwardBoostForce);
-                playerRigidbody.AddForce(boostDirection, ForceMode.Impulse);
+                rigidbody.AddForce(boostDirection, ForceMode.Impulse);
             }
         }
     }

@@ -23,7 +23,6 @@ public class Singularity : MonoBehaviour  // 근처의 오브젝트를 끌어당
             float gravityIntensity = Vector3.Distance(transform.position, other.transform.position) / m_GravityRadius;
             // 중력 당김의 힘을 적용
             other.attachedRigidbody.AddForce((transform.position - other.transform.position) * gravityIntensity * other.attachedRigidbody.mass * GRAVITY_PULL * Time.smoothDeltaTime);
-            //attachedRigidbody : 콜라이더가 부착된 rigidbody
         }
     }
 }

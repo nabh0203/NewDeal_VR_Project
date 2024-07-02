@@ -3,11 +3,19 @@
 [RequireComponent(typeof(SphereCollider))]
 public class SingularityCore : MonoBehaviour
 {
-    void OnTriggerEnter(Collider other)
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.GetComponent<BallController>()) //ball이 BallController 스크립트를 가지고 있으면 공 사라짐
+    //    {
+    //        other.GetComponent<BallController>().CountBall();
+    //    }
+    //}
+
+    void OnTriggerStay(Collider other)
     {
-        if (other.GetComponent<BallController>()) //ball이 SingularityPullable 스크립트를 가지고 있으면 공 사라짐
+        if (other.GetComponent<BallController>())
         {
-            other.GetComponent<BallController>().CountBall();
+            other.gameObject.SetActive(false);
         }
     }
 
@@ -19,4 +27,5 @@ public class SingularityCore : MonoBehaviour
             GetComponent<SphereCollider>().isTrigger = true; 
         }
     }
+
 }
