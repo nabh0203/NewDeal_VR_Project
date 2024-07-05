@@ -707,7 +707,6 @@ GameObject:
   - component: {fileID: 58749909}
   - component: {fileID: 58749913}
   - component: {fileID: 58749912}
-  - component: {fileID: 58749911}
   - component: {fileID: 58749910}
   m_Layer: 0
   m_Name: GoalSpot 3-3
@@ -752,21 +751,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1
   m_Center: {x: 0.000015258789, y: 0, z: -0.000030517578}
---- !u!114 &58749911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 58749908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c726b9923c0fc4da9b395c439aa4b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 2039410421}
-  NextStage: {fileID: 407238894}
-  delay: 2
 --- !u!23 &58749912
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1087,7 +1071,7 @@ GameObject:
   - component: {fileID: 129743959}
   - component: {fileID: 129743963}
   - component: {fileID: 129743962}
-  - component: {fileID: 129743961}
+  - component: {fileID: 129743964}
   - component: {fileID: 129743960}
   m_Layer: 0
   m_Name: GoalSpot 3-2
@@ -1132,21 +1116,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2.2
   m_Center: {x: 0.000015258789, y: 0, z: -0.000030517578}
---- !u!114 &129743961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129743958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c726b9923c0fc4da9b395c439aa4b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 2039410421}
-  NextStage: {fileID: 407238894}
-  delay: 2
 --- !u!23 &129743962
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1197,6 +1166,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129743958}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &129743964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129743958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 722b0e2989c91f6408f7daee919da88c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 2039410421}
+  NextStage: {fileID: 463519334}
+  delay: 2
 --- !u!1 &134415183
 GameObject:
   m_ObjectHideFlags: 0
@@ -2742,6 +2726,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 971852377}
   fadeDuration: 2
   textAnimation: {fileID: 6397674219029492547}
+  returnTo: {fileID: 8903420822618789048}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -3309,6 +3294,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 1739347930}
   fadeDuration: 2
   textAnimation: {fileID: 1834985611638524917}
+  returnTo: {fileID: 8903420822618789048}
 --- !u!1 &474889063
 GameObject:
   m_ObjectHideFlags: 0
@@ -3766,6 +3752,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 272171039}
   fadeDuration: 2
   textAnimation: {fileID: 6773693268416703159}
+  returnTo: {fileID: 8903420822618789048}
 --- !u!65 &635376150
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3987,7 +3974,7 @@ GameObject:
   - component: {fileID: 699093482}
   - component: {fileID: 699093486}
   - component: {fileID: 699093485}
-  - component: {fileID: 699093484}
+  - component: {fileID: 699093487}
   - component: {fileID: 699093483}
   m_Layer: 0
   m_Name: GoalSpot 3-1
@@ -4032,21 +4019,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2.2
   m_Center: {x: 0.000015258789, y: 0, z: -0.000030517578}
---- !u!114 &699093484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 699093481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c726b9923c0fc4da9b395c439aa4b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 2039410421}
-  NextStage: {fileID: 407238894}
-  delay: 2
 --- !u!23 &699093485
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4097,6 +4069,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699093481}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &699093487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699093481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 722b0e2989c91f6408f7daee919da88c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 2039410421}
+  NextStage: {fileID: 1595053617}
+  delay: 2
 --- !u!1001 &724554360
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4380,6 +4367,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 310991838}
   fadeDuration: 2
   textAnimation: {fileID: 547874486247777812}
+  returnTo: {fileID: 8903420822618789048}
 --- !u!1 &743734775
 GameObject:
   m_ObjectHideFlags: 0
@@ -4854,7 +4842,7 @@ GameObject:
   - component: {fileID: 811119888}
   - component: {fileID: 811119892}
   - component: {fileID: 811119891}
-  - component: {fileID: 811119890}
+  - component: {fileID: 811119894}
   - component: {fileID: 811119889}
   m_Layer: 0
   m_Name: GoalSpot 2-1
@@ -4899,21 +4887,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.3
   m_Center: {x: 0.0000076293945, y: 0, z: 0.000022888184}
---- !u!114 &811119890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 811119887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c726b9923c0fc4da9b395c439aa4b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 2039410421}
-  NextStage: {fileID: 635376148}
-  delay: 2
 --- !u!23 &811119891
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4964,6 +4937,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 811119887}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &811119894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811119887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73dc07b3ae2f07f4287f44baeaca0d2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 2039410421}
+  NextStage: {fileID: 635376148}
+  delay: 2
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -5109,7 +5097,7 @@ GameObject:
   - component: {fileID: 859553201}
   - component: {fileID: 859553200}
   - component: {fileID: 859553199}
-  - component: {fileID: 859553198}
+  - component: {fileID: 859553202}
   m_Layer: 0
   m_Name: GoalSpot 1-3
   m_TagString: Untagged
@@ -5132,21 +5120,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 461576602}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &859553198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 859553196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c726b9923c0fc4da9b395c439aa4b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 2039410421}
-  NextStage: {fileID: 1180976865}
-  delay: 2
 --- !u!65 &859553199
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5218,6 +5191,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859553196}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &859553202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859553196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73dc07b3ae2f07f4287f44baeaca0d2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 2039410421}
+  NextStage: {fileID: 1180976865}
+  delay: 2
 --- !u!1 &897819248
 GameObject:
   m_ObjectHideFlags: 0
@@ -5230,7 +5218,7 @@ GameObject:
   - component: {fileID: 897819253}
   - component: {fileID: 897819252}
   - component: {fileID: 897819251}
-  - component: {fileID: 897819250}
+  - component: {fileID: 897819254}
   m_Layer: 0
   m_Name: GoalSpot 2-2
   m_TagString: Untagged
@@ -5253,21 +5241,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1068437073}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &897819250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 897819248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c726b9923c0fc4da9b395c439aa4b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 2039410421}
-  NextStage: {fileID: 1449389335}
-  delay: 2
 --- !u!65 &897819251
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5339,6 +5312,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897819248}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &897819254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897819248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73dc07b3ae2f07f4287f44baeaca0d2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 2039410421}
+  NextStage: {fileID: 1449389335}
+  delay: 2
 --- !u!1 &905247134
 GameObject:
   m_ObjectHideFlags: 0
@@ -6243,6 +6231,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 1105532512}
   fadeDuration: 2
   textAnimation: {fileID: 481168449313057727}
+  returnTo: {fileID: 8903420822618789048}
 --- !u!65 &1180976867
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6954,6 +6943,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 355401626}
   fadeDuration: 2
   textAnimation: {fileID: 9054814202499363676}
+  returnTo: {fileID: 8903420822618789048}
 --- !u!65 &1449389337
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7149,6 +7139,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 1308881364}
   fadeDuration: 2
   textAnimation: {fileID: 6397657101669558125}
+  returnTo: {fileID: 8903420822618789048}
 --- !u!1 &1614644389
 GameObject:
   m_ObjectHideFlags: 0
@@ -7161,7 +7152,7 @@ GameObject:
   - component: {fileID: 1614644394}
   - component: {fileID: 1614644393}
   - component: {fileID: 1614644392}
-  - component: {fileID: 1614644391}
+  - component: {fileID: 1614644395}
   m_Layer: 0
   m_Name: GoalSpot 2-3
   m_TagString: Untagged
@@ -7184,21 +7175,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1068437073}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1614644391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1614644389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c726b9923c0fc4da9b395c439aa4b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 2039410421}
-  NextStage: {fileID: 407238894}
-  delay: 2
 --- !u!65 &1614644392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7270,6 +7246,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614644389}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1614644395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614644389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 722b0e2989c91f6408f7daee919da88c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 2039410421}
+  NextStage: {fileID: 407238894}
+  delay: 2
 --- !u!1 &1673066454
 GameObject:
   m_ObjectHideFlags: 0
@@ -53304,7 +53295,6 @@ GameObject:
   - component: {fileID: 8096719159896992979}
   - component: {fileID: 8096719159896992978}
   - component: {fileID: 1553096656416642909}
-  - component: {fileID: 5478273840732981711}
   m_Layer: 0
   m_Name: GolfCulb0628
   m_TagString: GolfClub
@@ -53742,28 +53732,6 @@ CapsuleCollider:
   m_Height: 0.07
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!64 &4861676670451639234
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8520659245407115260}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6344970219130381981, guid: 454afb74bc940664891bfd9979a367dc, type: 3}
 --- !u!1 &4897777874225395593
 GameObject:
   m_ObjectHideFlags: 0
@@ -54163,7 +54131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 2039410421}
-  NextStage: {fileID: 6670561684858952340}
+  NextStage: {fileID: 6204579598899370737}
   delay: 2
 --- !u!1 &5266910222873299636
 GameObject:
@@ -54381,19 +54349,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &5478273840732981711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4351804602825777878}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b9839cf464515743b60610b6ec72c9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxVel: 10
 --- !u!224 &5482398595161666059
 RectTransform:
   m_ObjectHideFlags: 0
@@ -55197,6 +55152,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 1891228751}
   fadeDuration: 2
   textAnimation: {fileID: 1551346777810533175}
+  returnTo: {fileID: 8903420822618789048}
 --- !u!4 &6243500745413854832
 Transform:
   m_ObjectHideFlags: 0
@@ -55949,6 +55905,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 5737645755942416405}
   fadeDuration: 2
   textAnimation: {fileID: 6415302835518965280}
+  returnTo: {fileID: 8903420822618789048}
 --- !u!65 &6670561684858952342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56603,9 +56560,10 @@ GameObject:
   - component: {fileID: 2330824855536518808}
   - component: {fileID: 5490162833349870517}
   - component: {fileID: 6606953686477891294}
+  - component: {fileID: 7512080429062830040}
   m_Layer: 0
   m_Name: OVRCameraRig
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56855,10 +56813,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db6b9dd3ce7e73b4eb8d5cf8f82a40a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 0.2
+  duration: 0.01
   amplitude: 1
   frequency: 1
-  hapticCount: 5
+  hapticCount: 20
 --- !u!1 &7444469078687819059
 GameObject:
   m_ObjectHideFlags: 0
@@ -56984,6 +56942,32 @@ Transform:
   - {fileID: 9043335147007541028}
   m_Father: {fileID: 2039410422}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &7512080429062830040
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7023597283778134651}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 1.2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7523502622084743832
 GameObject:
   m_ObjectHideFlags: 0
@@ -57797,7 +57781,6 @@ GameObject:
   - component: {fileID: 8242531729659050548}
   - component: {fileID: 315267393820082280}
   - component: {fileID: 3198542728484609121}
-  - component: {fileID: 4861676670451639234}
   - component: {fileID: 2745931238053850358}
   m_Layer: 0
   m_Name: Group 1

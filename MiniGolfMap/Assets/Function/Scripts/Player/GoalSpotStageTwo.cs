@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class GoalSpot : MonoBehaviour
+public class GoalSpotStageTwo : MonoBehaviour
 {
     public GameObject Player;
     //public GameObject GoalParticle;
@@ -37,9 +37,12 @@ public class GoalSpot : MonoBehaviour
             yield break;
         }
 
-        // 게임 오브젝트를 targetPosition의 위치로 이동시킵니다.
+        // 게임 오브젝트를 NextStage의 위치로 이동시킵니다.
         Player.transform.position = NextStage.position;
+
+        // 플레이어의 y축 회전 각도를 -90도로 설정합니다.
+        Player.transform.rotation = Quaternion.Euler(0, -90, 0);
+
         Debug.Log("Player moved to the next stage position after delay.");
     }
 }
-
