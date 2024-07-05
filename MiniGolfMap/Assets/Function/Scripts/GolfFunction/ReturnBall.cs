@@ -49,7 +49,7 @@ public class ReturnBall : MonoBehaviour
     //    Debug.Log("공 소환 멈추기");
     //}
 
-    private void ReturnToSpawn()
+    public void ReturnToSpawn()
     {
         // 공을 지정한 위치로 이동시키고 속도와 각속도를 0으로 설정합니다.
         transform.position = spwan.position;
