@@ -7,12 +7,20 @@ public class Singularity : MonoBehaviour  // 근처의 오브젝트를 끌어당
     static float m_GravityRadius = 1f; //중력 작용 반경
 
     void Awake()
-    {   
+    {
         // SphereCollider가 존재하면 isTrigger를 true로 설정
         if (GetComponent<SphereCollider>())
         {
             GetComponent<SphereCollider>().isTrigger = true;
         }
+        
+
+        //SphereCollider collider = GetComponent<SphereCollider>();
+        //if (collider)
+        //{
+        //    collider.isTrigger = true;
+        //    collider.radius = m_GravityRadius; // 중력 작용 반경 설정
+        //}
     }
 
     void OnTriggerStay(Collider other)
@@ -24,5 +32,12 @@ public class Singularity : MonoBehaviour  // 근처의 오브젝트를 끌어당
             // 중력 당김의 힘을 적용
             other.attachedRigidbody.AddForce((transform.position - other.transform.position) * gravityIntensity * other.attachedRigidbody.mass * GRAVITY_PULL * Time.smoothDeltaTime);
         }
+
+        //Vector3 direction = (transform.position - other.transform.position).normalized; // 중심으로 당기는 방향
+        //float distance = Vector3.Distance(transform.position, other.transform.position); // 거리 계산
+        //float gravityIntensity = 1f - (distance / m_GravityRadius); // 거리 비례 중력 강도 계산
+
+        //// 중력 당김의 힘을 적용
+        //other.attachedRigidbody.AddForce(direction * gravityIntensity * GRAVITY_PULL * other.attachedRigidbody.mass * Time.deltaTime);
     }
 }

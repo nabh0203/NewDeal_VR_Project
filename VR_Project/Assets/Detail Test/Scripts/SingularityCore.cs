@@ -13,7 +13,7 @@ public class SingularityCore : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.GetComponent<BallController>())
+        if (other.CompareTag ("Ball"))
         {
             other.gameObject.SetActive(false);
         }
