@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using static Unity.VisualScripting.Member;
 
 public class LoadSceneButton : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class LoadSceneButton : MonoBehaviour
 
     public Material hologram;
     public VR_Fade_NBH vrFade; // Reference to the VR_Fade_NBH script
+
+    public AudioSource startBGM;
 
     private void Start()
     {
@@ -61,6 +64,7 @@ public class LoadSceneButton : MonoBehaviour
         // 애니메이션이 끝난 후 씬 로드
         DOVirtual.DelayedCall(5f, () => FadeOut());
         DOVirtual.DelayedCall(7f, () => SceneManager.LoadScene(SceneName));
+        DOVirtual.DelayedCall(6f, () => StartCoroutine(FadeOut(startBGM, 1f)));
         DOVirtual.DelayedCall(7f, () => DOTween.KillAll());
         // Start the fade-out effect
         
@@ -72,5 +76,19 @@ public class LoadSceneButton : MonoBehaviour
         {
             vrFade.FadeOut();
         }
+    }
+
+    private IEnumerator FadeOut(AudioSource audioSource, float duration)
+    {
+        float startVolume = audioSource.volume;
+
+        for (float t = 0; t < duration; t += Time.deltaTime)
+        {
+            audioSource.volume = Mathf.Lerp(startVolume, 0, t / duration);
+            yield return null;
+        }
+
+        audioSource.volume = 0;
+        audioSource.Stop();
     }
 }
