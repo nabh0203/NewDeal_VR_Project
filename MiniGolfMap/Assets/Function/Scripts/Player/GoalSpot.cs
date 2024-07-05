@@ -4,6 +4,7 @@ using UnityEngine;
 public class GoalSpot : MonoBehaviour
 {
     public GameObject Player;
+    //public GameObject GoalParticle;
     public Transform NextStage;
     public float delay = 2.0f; // Unity 에디터에서 조정 가능한 딜레이 시간
 
@@ -11,6 +12,8 @@ public class GoalSpot : MonoBehaviour
     {
         // 트리거에 진입했을 때 실행되는 함수
         MoveToTargetPosition();
+        VR_Fade_NBH.instance.FadeOut();
+        //Instantiate(GoalParticle, transform.position , Quaternion.identity);
     }
 
     public void MoveToTargetPosition()
