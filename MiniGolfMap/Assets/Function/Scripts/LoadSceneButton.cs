@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
-using static Unity.VisualScripting.Member;
 
 public class LoadSceneButton : MonoBehaviour
 {
@@ -16,7 +15,13 @@ public class LoadSceneButton : MonoBehaviour
     public Material hologram;
     public VR_Fade_NBH vrFade; // Reference to the VR_Fade_NBH script
 
-    public AudioSource startBGM;
+    public AudioManager BGM;
+    public AudioSource startVFX;
+    public AudioClip buttonClick;
+    public AudioClip openDoor;
+
+    public GameObject smokeParticle;
+    public Transform smokePosition;
 
     private void Start()
     {
@@ -35,6 +40,7 @@ public class LoadSceneButton : MonoBehaviour
 
     public void OnClickButton()
     {
+        startVFX.PlayOneShot(buttonClick);
         Debug.Log("버튼 눌림");
         // 2초 후에 글리치 효과를 비활성화
         StartCoroutine(GlitchEffect());
@@ -61,10 +67,13 @@ public class LoadSceneButton : MonoBehaviour
         // 원하는 애니메이션 효과를 설정 (여기서는 문이 90도 회전하는 예시)
         openDoorOne.DOPlay();
         openDoorTwo.DOPlay();
+        Instantiate(smokeParticle, smokePosition.position, Quaternion.identity);
+        Destroy(smokeParticle, 1f);
+        startVFX.PlayOneShot(openDoor);
         // 애니메이션이 끝난 후 씬 로드
         DOVirtual.DelayedCall(5f, () => FadeOut());
         DOVirtual.DelayedCall(7f, () => SceneManager.LoadScene(SceneName));
-        DOVirtual.DelayedCall(6f, () => StartCoroutine(FadeOut(startBGM, 1f)));
+        DOVirtual.DelayedCall(6f, () => StartCoroutine(FadeOut(BGM.audioSource, 1f)));
         DOVirtual.DelayedCall(7f, () => DOTween.KillAll());
         // Start the fade-out effect
         

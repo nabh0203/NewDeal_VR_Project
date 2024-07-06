@@ -5,9 +5,12 @@ using UnityEngine;
 public class StartBGM : MonoBehaviour
 {
     public LoadSceneButton sceneLoad;
+    public AudioManager BGM;
 
-
-
+    private void Start()
+    {
+        BGM.OnStartGame();
+    }
     private IEnumerator FadeOut(AudioSource audioSource, float duration)
     {
         float startVolume = audioSource.volume;

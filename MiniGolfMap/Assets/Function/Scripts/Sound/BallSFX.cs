@@ -65,6 +65,11 @@ public class BallSFX : MonoBehaviour
         }
     }
 
+    public void returnBall()
+    {
+        ChangeSFX(2);
+    }
+
     private void ChangeSFX(int index)
     {
         if (index < SFX.Length && index < ballSFXs.Length)
