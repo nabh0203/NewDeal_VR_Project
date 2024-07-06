@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ChuckChuck/MainScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/ChuckChuck/Ending.unity
+    guid: 5a6e578048b46f944b8c55915c2415e4
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ce33291c2f6a9e64aae8c8cfa05752f7,
       type: 2}

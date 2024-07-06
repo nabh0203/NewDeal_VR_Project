@@ -15508,6 +15508,7 @@ GameObject:
   - component: {fileID: 1203473635}
   - component: {fileID: 1203473634}
   - component: {fileID: 1203473637}
+  - component: {fileID: 1203473638}
   m_Layer: 0
   m_Name: GoalSpot 3-3
   m_TagString: Goal
@@ -15615,6 +15616,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Goal: {fileID: 1501876002}
+--- !u!114 &1203473638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203473632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1f3ff1a43c7b614794e2ec1e6d7e2c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1353785667195068272}
 --- !u!1 &1225710429
 GameObject:
   m_ObjectHideFlags: 0
@@ -25681,6 +25695,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa792bd799df6b5489cb21d8f2ef2223, type: 3}
+--- !u!82 &1353785667195068272 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7917721208162807736, guid: aa792bd799df6b5489cb21d8f2ef2223,
+    type: 3}
+  m_PrefabInstance: {fileID: 1353785667195068271}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
