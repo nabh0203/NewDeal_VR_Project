@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 28277271}
   - component: {fileID: 28277270}
   m_Layer: 5
-  m_Name: The End Text (TMP) (1)
+  m_Name: Thank You Text (TMP) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -573}
+  m_AnchoredPosition: {x: 0, y: -1200}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &28277270
@@ -206,8 +206,8 @@ MonoBehaviour:
   targetIsSelf: 1
   targetGO: {fileID: 0}
   tweenTargetIsTargetGO: 1
-  delay: 2.6
-  duration: 3.6
+  delay: 25
+  duration: 5
   easeType: 1
   easeCurve:
     serializedVersion: 2
@@ -250,7 +250,7 @@ MonoBehaviour:
   autoPlay: 1
   useTargetAsV3: 0
   endValueFloat: 0
-  endValueV3: {x: 0, y: 100, z: 0}
+  endValueV3: {x: 0, y: -575, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
@@ -289,7 +289,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: THE END
+  m_text: Thank You
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fedf0a0abaf336042bdcadf8b9d3b9d4, type: 2}
   m_sharedMaterial: {fileID: -1401183064702544240, guid: fedf0a0abaf336042bdcadf8b9d3b9d4,
