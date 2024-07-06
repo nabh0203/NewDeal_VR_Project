@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - GolfBall
+  - GolfClub
+  - StartPoint
+  - Ball
+  - Goal
+  - border
+  - Stage1
+  - Stage2
+  - Stage3
   layers:
   - Default
   - TransparentFX

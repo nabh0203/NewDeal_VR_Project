@@ -68,6 +68,7 @@ public class FadeOut : MonoBehaviour
     private bool isFadingOut = false; // 페이드 아웃 중인지 확인하는 변수
     public DOTweenAnimation textAnimation;
     public ReturnBall returnTo;
+    public GameObject golfBall;
 
     void Start()
     {
@@ -84,6 +85,7 @@ public class FadeOut : MonoBehaviour
     {
         if (!isFadingOut && other.CompareTag("Player"))
         {
+            golfBall.SetActive(true);
             returnTo.ReturnToSpawn();
             fadeObject.SetActive(true);
             VR_Fade_NBH.instance.FadeIn();

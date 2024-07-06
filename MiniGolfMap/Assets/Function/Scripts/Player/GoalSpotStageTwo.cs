@@ -12,6 +12,7 @@ public class GoalSpotStageTwo : MonoBehaviour
     {
         // 트리거에 진입했을 때 실행되는 함수
         MoveToTargetPosition();
+        other.gameObject.SetActive(false);
         VR_Fade_NBH.instance.FadeOut();
         //Instantiate(GoalParticle, transform.position , Quaternion.identity);
     }
