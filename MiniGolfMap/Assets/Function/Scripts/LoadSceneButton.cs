@@ -68,7 +68,7 @@ public class LoadSceneButton : MonoBehaviour
         openDoorOne.DOPlay();
         openDoorTwo.DOPlay();
         Instantiate(smokeParticle, smokePosition.position, Quaternion.identity);
-        Destroy(smokeParticle, 1f);
+        //Destroy(smokeParticle, 1f);
         startVFX.PlayOneShot(openDoor);
         // 애니메이션이 끝난 후 씬 로드
         DOVirtual.DelayedCall(5f, () => FadeOut());

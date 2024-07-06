@@ -12,6 +12,7 @@ public class ReturnBall : MonoBehaviour
     // HapticFeedback 스크립트를 참조
     public HapticFeedback hapticFeedback;
 
+    public BallSFX ballSFX;
     private void Start()
     {   
         if (hapticFeedback == null)
@@ -26,6 +27,7 @@ public class ReturnBall : MonoBehaviour
         // OVRInput을 사용하여 왼쪽 컨트롤러의 X 버튼을 감지합니다.
         if (OVRInput.GetDown(OVRInput.Button.Three))
         {
+            ballSFX.returnBall();
             // X 버튼이 눌렸을 때 공을 지정한 위치로 이동시키고 속도를 0으로 설정합니다.
             ReturnToSpawn();
             if (hapticFeedback != null)
@@ -55,7 +57,7 @@ public class ReturnBall : MonoBehaviour
         transform.position = spwan.position;
         transform.rotation = Quaternion.identity;
         isBall = true;
-
+        
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb != null)
         {

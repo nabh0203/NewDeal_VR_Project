@@ -9,6 +9,10 @@ TagManager:
   - StartPoint
   - Ball
   - Goal
+  - border
+  - Stage1
+  - Stage2
+  - Stage3
   layers:
   - Default
   - TransparentFX

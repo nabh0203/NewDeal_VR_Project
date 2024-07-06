@@ -45,50 +45,70 @@ using UnityEngine;
 
 public class BGMSoundManager : MonoBehaviour
 {
-    public AudioSource[] BGMS;
-    public AudioClip[] BGM;
     public float fadeDuration = 1.0f; // 페이드 아웃/인 시간 설정
+    public AudioManager audioManager; // AudioManager 참조
+
+    private AudioSource currentSource; // 현재 재생 중인 오디오 소스를 추적
+
+    private void Start()
+    {
+        if (audioManager != null)
+        {
+            currentSource = audioManager.audioSource;
+            audioManager.OnStartGame(); // OnStartGame() 함수 호출
+            Debug.Log("튜토리얼 시작");
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Stage1"))
         {
             StartCoroutine(ChangeBGM(0));
+            Debug.Log("Stage1");
         }
         else if (other.CompareTag("Stage2"))
         {
             StartCoroutine(ChangeBGM(1));
+            Debug.Log("Stage2");
         }
         else if (other.CompareTag("Stage3"))
         {
             StartCoroutine(ChangeBGM(2));
+            Debug.Log("Stage3");
         }
     }
 
     private IEnumerator ChangeBGM(int index)
     {
-        if (index < BGMS.Length && index < BGM.Length)
+        // 현재 재생 중인 오디오 소스를 페이드 아웃
+        if (currentSource != null)
         {
-            // 현재 재생 중인 모든 오디오 소스를 페이드 아웃
-            foreach (AudioSource source in BGMS)
-            {
-                StartCoroutine(FadeOut(source, fadeDuration));
-            }
-
-            // 페이드 아웃이 끝날 때까지 대기
-            yield return new WaitForSeconds(fadeDuration);
-
-            // 새로운 오디오 클립으로 변경
-            foreach (AudioSource source in BGMS)
-            {
-                source.clip = BGM[index];
-                source.Play();
-                StartCoroutine(FadeIn(source, fadeDuration));
-            }
+            yield return StartCoroutine(FadeOut(currentSource, fadeDuration));
         }
-        else
+
+        // AudioManager를 통해 새로운 오디오 클립 재생
+        switch (index)
         {
-            Debug.LogWarning("Not Index");
+            case 0:
+                audioManager.PlayStage1Music();
+                break;
+            case 1:
+                audioManager.PlayStage2Music();
+                break;
+            case 2:
+                audioManager.PlayStage3Music();
+                break;
+            default:
+                Debug.LogWarning("Invalid BGM index");
+                yield break;
+        }
+
+        // 새로운 오디오 소스를 페이드 인
+        currentSource = audioManager.audioSource; // 현재 오디오 소스를 업데이트
+        if (currentSource != null)
+        {
+            yield return StartCoroutine(FadeIn(currentSource, fadeDuration));
         }
     }
 
@@ -120,3 +140,5 @@ public class BGMSoundManager : MonoBehaviour
         audioSource.volume = 1;
     }
 }
+
+
