@@ -134,7 +134,7 @@ namespace Oculus.Interaction
 
         // Whenever we change the number of grab points, we save the
         // current transform data
-        private void BeginTransform()
+        public void BeginTransform()
         {
             // End the transform on any existing transformer before we
             // begin the new one
@@ -177,7 +177,7 @@ namespace Oculus.Interaction
             _activeTransformer.UpdateTransform();
         }
 
-        private void EndTransform()
+        public void EndTransform()
         {
             if (_activeTransformer == null)
             {

@@ -13,6 +13,8 @@ TagManager:
   - Stage1
   - Stage2
   - Stage3
+  - HandL
+  - HandR
   layers:
   - Default
   - TransparentFX
