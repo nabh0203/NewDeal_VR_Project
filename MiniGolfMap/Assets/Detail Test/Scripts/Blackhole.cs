@@ -17,7 +17,7 @@ public class BlackHole : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Ball"))
+        if (other.CompareTag("GolfBall"))
         {
             ball = other.gameObject;
             rb = ball.GetComponent<Rigidbody>();
