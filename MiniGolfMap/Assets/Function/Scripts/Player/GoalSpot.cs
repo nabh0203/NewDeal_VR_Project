@@ -10,10 +10,13 @@ public class GoalSpot : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("GolfBall"))
+        {
+            MoveToTargetPosition();
+            other.gameObject.SetActive(false);
+            VR_Fade_NBH.instance.FadeOut();
+        }
         // 트리거에 진입했을 때 실행되는 함수
-        MoveToTargetPosition();
-        other.gameObject.SetActive(false);
-        VR_Fade_NBH.instance.FadeOut();
         //Instantiate(GoalParticle, transform.position , Quaternion.identity);
     }
 
