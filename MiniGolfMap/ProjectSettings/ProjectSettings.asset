@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Na Hollo
-  productName: 'Chuck Chuck : Arcade mini golf'
+  companyName: NaHollo
+  productName: MiniGolfMap
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.12156863, g: 0.12156863, b: 0.1254902, a: 1}
@@ -142,8 +142,6 @@ PlayerSettings:
   bundleVersion: 1.0
   preloadedAssets:
   - {fileID: 11400000, guid: 1412560edc87575479d87f631632b314, type: 2}
-  - {fileID: 9127475912743774133, guid: 7a0a7a9092a1fa044afa132d8c29041a, type: 2}
-  - {fileID: 11400000, guid: ce33291c2f6a9e64aae8c8cfa05752f7, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
