@@ -13,9 +13,11 @@
 개발 기능
 - OVR Input System
 - OVR Haptic System
-- Trail Render
 - Respwan Ball
+- VR Fade
   
 부수 개발 기능
 - WormHole
-- Gravity Hole 
+- Gravity Hole
+- Ball Trail Render
+
