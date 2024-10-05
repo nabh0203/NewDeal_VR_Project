@@ -17,4 +17,5 @@
 - Respwan Ball
   
 부수 개발 기능
-- Wom 
+- WormHole
+- Gravity Hole 
