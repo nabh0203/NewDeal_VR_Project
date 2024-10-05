@@ -10,12 +10,11 @@
 나병호:개발
 김혜림:개발
 
-**개발 기능**
-
+개발 기능
 - OVR Input System
 - OVR Haptic System
 - Trail Render
 - Respwan Ball
   
-**부수 개발 기능**
-- 
+부수 개발 기능
+- Wom 
