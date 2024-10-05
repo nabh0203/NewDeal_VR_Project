@@ -15,7 +15,7 @@
 
 # 개발 기능
 
-개발 기능
+Player 기능
 - OVR Input System
 - OVR Haptic System
 - Respwan Ball
